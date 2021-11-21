@@ -10,6 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Practica03">
         <activity
+            android:name=".Vender"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".Comprar"
+            android:exported="false" />
+        <activity
             android:name=".Menu"
             android:exported="false" />
         <activity
