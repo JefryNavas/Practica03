@@ -13,16 +13,22 @@ import android.annotation.SuppressLint;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+
 public class Vender extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
 
     DrawerLayout mDrawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-
     ActionBarDrawerToggle toggle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,9 @@ public class Vender extends AppCompatActivity implements NavigationView.OnNaviga
 
 
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
     }
     private ActionBarDrawerToggle setUpDrawerToggle(){
      return new ActionBarDrawerToggle(this,
@@ -102,4 +111,6 @@ public class Vender extends AppCompatActivity implements NavigationView.OnNaviga
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }

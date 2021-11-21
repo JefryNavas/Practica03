@@ -12,19 +12,19 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btn_save2"
+            android:id="@+id/btn_guardar"
             android:layout_width="189dp"
             android:layout_height="49dp"
-            android:layout_marginTop="40dp"
-            android:hint="@string/btn_save"
+            android:layout_marginTop="44dp"
+            android:text="Guardar Registro"
             android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.306"
+            app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toEndOf="@+id/radioGroup"
-            app:layout_constraintTop_toBottomOf="@+id/txt_owners2" />
+            app:layout_constraintTop_toBottomOf="@+id/propietarios_auto" />
 
         <EditText
-            android:id="@+id/txt_owners2"
+            android:id="@+id/propietarios_auto"
             android:layout_width="214dp"
             android:layout_height="50dp"
             android:ems="10"
@@ -34,10 +34,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber6" />
+            app:layout_constraintTop_toBottomOf="@+id/km_auto" />
 
         <EditText
-            android:id="@+id/editTextNumber3"
+            android:id="@+id/precio_auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -48,10 +48,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+            app:layout_constraintTop_toBottomOf="@+id/anio_auto" />
 
         <EditText
-            android:id="@+id/editTextNumber4"
+            android:id="@+id/cilindraje_auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -62,7 +62,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber3" />
+            app:layout_constraintTop_toBottomOf="@+id/precio_auto" />
 
         <TextView
             android:id="@+id/textView5"
@@ -78,7 +78,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/codigo_auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -92,7 +92,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <EditText
-            android:id="@+id/editTextNumber2"
+            android:id="@+id/anio_auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -103,10 +103,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/modelo_auto" />
 
         <EditText
-            android:id="@+id/editTextNumber6"
+            android:id="@+id/km_auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -117,10 +117,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+            app:layout_constraintTop_toBottomOf="@+id/pais_auto" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/marca_auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -131,10 +131,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+            app:layout_constraintTop_toBottomOf="@+id/codigo_auto" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/pais_auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -145,10 +145,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber4" />
+            app:layout_constraintTop_toBottomOf="@+id/cilindraje_auto" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/modelo_auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -159,7 +159,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/marca_auto" />
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -169,7 +169,7 @@
             android:layout_marginTop="20dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_owners2">
+            app:layout_constraintTop_toBottomOf="@+id/propietarios_auto">
 
             <RadioButton
                 android:id="@+id/auto_nuevo"
