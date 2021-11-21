@@ -14,9 +14,9 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void cargarComprar(View vista){
-        Intent shop = new Intent(this, Comprar.class);
-        startActivity(shop);
+    public void cargarVista(View vista){
+        Intent menu = new Intent(this, Menu.class);
+        startActivity(menu);
     }
 
 }

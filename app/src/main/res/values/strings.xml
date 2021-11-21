@@ -18,4 +18,9 @@
     <string name="btn_calcular">CALCULAR</string>
     <string name="drawer_open">Open Drawer</string>
     <string name="drawer_close">Close Drawer</string>
+    <string name="cod_vehiculo">Código Vehículo:</string>
+    <string name="precio_vehiculo">Precio del auto:</string>
+    <string name="cilindraje_auto">Cilindraje:</string>
+    <string name="pais">País de Origen:</string>
+
 </resources>
