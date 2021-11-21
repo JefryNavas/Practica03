@@ -52,6 +52,7 @@
         android:layout_height="61dp"
         android:layout_marginTop="48dp"
         android:hint="@string/btn_login"
+        android:onClick="cargarComprar"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

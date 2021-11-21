@@ -10,11 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Practica03">
         <activity
+            android:name=".Comprar"
+            android:exported="false" />
+        <activity
             android:name=".Menu"
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Register"
             android:exported="true">
