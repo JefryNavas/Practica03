@@ -5,21 +5,46 @@
     android:layout_height="match_parent"
     android:background="@color/teal_700"
     tools:context=".consultarFragment">
-
-
-        <ScrollView
+        <LinearLayout
+            android:id="@+id/li"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-
-                <LinearLayout
-                    android:id="@+id/colmnuna_vertical"
+                <EditText
+                    android:id="@+id/buscar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"/>
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
 
 
-        </ScrollView>
+                <Button
+                    android:id="@+id/btn_buscar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Buscar" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:id="@+id/colmnuna_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+
+
+                        </LinearLayout>
+
+
+                </ScrollView>
+        </LinearLayout>
+
+
 
 
 

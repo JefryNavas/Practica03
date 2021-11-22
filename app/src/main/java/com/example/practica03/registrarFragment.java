@@ -124,7 +124,7 @@ public class registrarFragment extends Fragment {
         aux4 = new Concesionario();
         aux5 = new Concesionario();
         aux6 = new Concesionario();
-        aux.setCodigo(12345);
+        aux.setCodigo(1);
         aux.setMarca("Haval");
         aux.setModelo("H6");
         aux.setAnio(2020);
