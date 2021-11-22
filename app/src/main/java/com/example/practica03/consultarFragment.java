@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class consultarFragment extends Fragment {
     Concesionario encontrado = new Concesionario();
-
+    Concesionario coche = new Concesionario();
     LinearLayout columna_vertical;
     public EditText buscar;
     public Button btn_buscar;
@@ -54,11 +54,14 @@ public class consultarFragment extends Fragment {
                 }
             }
         });
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
 
-
-
+        params.setMargins(700,200,0,0);
         for (int i = 0;i<auto.coches.size();i++){
-
+            Button btn_eliminar = new Button(getContext());
             CardView cv = new CardView(getContext());
             TextView tv_dinamico = new TextView(getContext());
             tv_dinamico.setTextSize(20);
@@ -78,11 +81,17 @@ public class consultarFragment extends Fragment {
             cv.setMaxCardElevation(30);
             cv.setCardElevation(6);
             cv.setUseCompatPadding(true);
+            btn_eliminar.setText("Eliminar");
+            btn_eliminar.setLayoutParams(params);
+            Eliminar(btn_eliminar,auto.coches.get(i).getCodigo());
+            cv.addView(btn_eliminar);
             cv.addView(tv_dinamico);
+
 
             columna_vertical.addView(cv);
         }
-
+        int cont = auto.coches.size();
+        Toast.makeText(getContext(), "Tamaño: "+cont, Toast.LENGTH_SHORT).show();
         return root;
     }
 
@@ -98,10 +107,38 @@ public class consultarFragment extends Fragment {
 
         return false;
     }
+    public Concesionario buscarVehiculo2(int num){
+
+        for (int i = 0; i < auto.coches.size(); i++) {
+            if (num == auto.coches.get(i).getCodigo()){
+                encontrado = auto.coches.get(i);
+                return encontrado;
+            }
+        }
+        return null;
+
+    }
 
     public void cargarConsulta(){
         Intent comprar = new Intent(getContext(), actualizarVehiculo.class);
         startActivity(comprar);
+    }
+    public void cargarConsulta2(){
+        Intent comprar = new Intent(getContext(), Vender.class);
+        startActivity(comprar);
+    }
+
+    public void Eliminar(Button eliminar,int cod){
+
+        eliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                coche = buscarVehiculo2(cod);
+                auto.coches.remove(coche);
+                Toast.makeText(getContext(), "Eliminado", Toast.LENGTH_SHORT).show();
+                cargarConsulta2();
+            }
+        });
     }
 
 
