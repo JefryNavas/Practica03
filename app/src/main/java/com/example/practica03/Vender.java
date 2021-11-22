@@ -90,12 +90,6 @@ public class Vender extends AppCompatActivity implements NavigationView.OnNaviga
             case R.id.nav_consultar:
                 ft.replace(R.id.content,new consultarFragment()).commit();
                 break;
-            case R.id.nav_actualizar:
-                ft.replace(R.id.content,new actualizarFragment()).commit();
-                break;
-            case R.id.nav_eliminar:
-                ft.replace(R.id.content,new eliminarFragment()).commit();
-                break;
             case R.id.nav_cotizar:
                 ft.replace(R.id.content,new cotizarFragment()).commit();
                 break;

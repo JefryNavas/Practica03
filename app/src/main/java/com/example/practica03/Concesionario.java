@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Concesionario {
     static ArrayList<Concesionario> coches = new ArrayList();
-
-
+    static Concesionario coche_encontrado;
+    public Concesionario(){}
 
 
     private int codigo;
@@ -18,6 +18,20 @@ public class Concesionario {
     private int cilindraje;
     private int Km;
     private int propietarios;
+
+    public Concesionario(int codigo,String marca,String modelo,String pais,String estado,int anio,int precio,int cilindraje,
+                         int km,int propietarios){
+        this.codigo = codigo;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.pais = pais;
+        this.estado = estado;
+        this.anio = anio;
+        this.precio = precio;
+        this.cilindraje = cilindraje;
+        this.Km = km;
+        this.propietarios = propietarios;
+    }
 
     public int getKm() {
         return Km;

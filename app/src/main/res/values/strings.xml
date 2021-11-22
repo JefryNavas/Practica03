@@ -22,5 +22,6 @@
     <string name="precio_vehiculo">Precio del auto:</string>
     <string name="cilindraje_auto">Cilindraje:</string>
     <string name="pais">País de Origen:</string>
+    <string name="buscar_vehiculo">Buscar Vehículo</string>
 
 </resources>
