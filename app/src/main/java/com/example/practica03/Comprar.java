@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.InputFilter;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,8 +11,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
-
-import java.text.DecimalFormat;
 import java.util.Calendar;
 
 public class Comprar extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -42,17 +39,52 @@ public class Comprar extends AppCompatActivity implements AdapterView.OnItemSele
         dropdown = findViewById(R.id.spn_tapi);
         dropdown.setOnItemSelectedListener(this);
         dropdown2 = findViewById(R.id.spn_pintura);
+        dropdown2.setOnItemSelectedListener(this);
         dropdown3 = findViewById(R.id.spn_carro);
+        dropdown3.setOnItemSelectedListener(this);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         dropdown.setAdapter(adapter);
         dropdown2.setAdapter(adapter);
         dropdown3.setAdapter(adapter);
         res = (TextView) findViewById(R.id.txt_resultado);
+        findViewById(R.id.btn_calcular).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String mar = marca.getText().toString();
+                String mod = modelo.getText().toString();
+
+                if(mar.equalsIgnoreCase("")){
+                    marca.setHint("Ingresa la Marca");//it gives user to hint
+                    marca.setError("Ingresa la Marca");
+                }
+                else if(mod.equalsIgnoreCase("")){
+                    modelo.setHint("Ingresa el Modelo");//it gives user to hint
+                    modelo.setError("Ingresa el Modelo");
+                }
+                else if(year.getText().toString().trim().equals("")){
+                    year.setHint("Ingresa el Año");//it gives user to hint
+                    year.setError("Ingresa el Año");
+                }
+                else if(km.getText().toString().trim().equals("")){
+                    km.setHint("Ingresa el Kilometraje");//it gives user to hint
+                    km.setError("Ingresa el Kilometraje");
+                }
+                else if(valor.getText().toString().trim().equals("")){
+                    valor.setHint("Ingresa el valor de venta");//it gives user to hint
+                    valor.setError("Ingresa el valor de venta");
+                }
+                else if(owners.getText().toString().trim().equals("")){
+                    owners.setHint("Ingresa el Nro de Dueños");//it gives user to hint
+                    owners.setError("Nro de Dueños");
+                }
+                else{
+                    calcular(view);
 
 
+                }
+            }
+        });
     }
-
-
 
     private int transformar(String value){
         int res;
@@ -73,11 +105,11 @@ public class Comprar extends AppCompatActivity implements AdapterView.OnItemSele
             String val = adapterView.getItemAtPosition(i).toString();
             vtap = transformar(val);
         }
-        if(adapterView.getId()==R.id.spn_pintura){
+        else if(adapterView.getId()==R.id.spn_pintura){
             String val = adapterView.getItemAtPosition(i).toString();
             vpint = transformar(val);
         }
-        if(adapterView.getId()==R.id.spn_carro){
+        else if(adapterView.getId()==R.id.spn_carro){
             String val = adapterView.getItemAtPosition(i).toString();
             vcar = transformar(val);
         }
@@ -145,11 +177,12 @@ public class Comprar extends AppCompatActivity implements AdapterView.OnItemSele
              if(switchState){
                  deschoques = venta*0.15;
              }
-             if(switchState2){
+             if(!switchState2){
                  descac = venta*0.005;
              }
-
-             double pfinal = venta-desyear-deskm-deschoques-descac-desown+(montot)+(montop)+(montoc);
+             double montos = montot+(montop)+(montoc);
+             double pfinal = venta-desyear-deskm-deschoques-descac-desown;
+             pfinal = pfinal+(montos);
 
             res.setText("Debes Ofrecer: $"+pfinal+" por este auto");
 
