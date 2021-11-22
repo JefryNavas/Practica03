@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Regístrate"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/txt_user"
+        android:id="@+id/txt_userlogin"
         android:layout_width="257dp"
         android:layout_height="45dp"
         android:layout_marginTop="24dp"
@@ -95,7 +96,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_user" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_userlogin" />
 
     <EditText
         android:id="@+id/txt_psw2"
@@ -120,7 +121,33 @@
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="211dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="28dp"
+        android:text="Ya estás registrado?"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ingresar"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="Registar"/>
+        app:layout_constraintTop_toBottomOf="@+id/btn_save" />
+
+    <Button
+        android:id="@+id/btn_ingresar"
+        android:layout_width="134dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/holo_blue_dark"
+        android:backgroundTint="@color/purple_200"
+        android:text="ingresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_save"
+        android:onClick="irLogin"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

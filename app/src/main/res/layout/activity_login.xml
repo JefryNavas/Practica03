@@ -30,10 +30,10 @@
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_user" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_userlogin" />
 
     <EditText
-        android:id="@+id/txt_user"
+        android:id="@+id/txt_userlogin"
         android:layout_width="238dp"
         android:layout_height="48dp"
         android:layout_marginTop="56dp"
@@ -50,9 +50,8 @@
         android:id="@+id/btn_login"
         android:layout_width="119dp"
         android:layout_height="61dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:hint="@string/btn_login"
-        android:onClick="cargarVista"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +63,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="56dp"
         android:text="Iniciar Sesión"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.544"
@@ -75,7 +75,7 @@
         android:layout_width="43dp"
         android:layout_height="42dp"
         android:layout_marginTop="272dp"
-        app:layout_constraintEnd_toStartOf="@+id/txt_user"
+        app:layout_constraintEnd_toStartOf="@+id/txt_userlogin"
         app:layout_constraintHorizontal_bias="0.595"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -49,6 +49,7 @@ public class Comprar extends AppCompatActivity implements AdapterView.OnItemSele
         dropdown3.setAdapter(adapter);
         res = (TextView) findViewById(R.id.txt_resultado);
 
+
     }
 
 

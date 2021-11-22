@@ -49,6 +49,7 @@ public class registrarFragment extends Fragment {
         bn_guardar = root.findViewById(R.id.btn_guardar);
 
         bn_guardar.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 String estado="";
@@ -66,7 +67,17 @@ public class registrarFragment extends Fragment {
                         Integer.parseInt(km.getText().toString()),
                         Integer.parseInt(propietarios.getText().toString()))){
                     Toast.makeText(getContext(), "Vehículo registrado correctamente", Toast.LENGTH_SHORT).show();
-
+                    codigo.getText().clear();
+                    marca.getText().clear();
+                    modelo.getText().clear();
+                    anio.getText().clear();
+                    precio.getText().clear();
+                    cilindraje.getText().clear();
+                    pais.getText().clear();
+                    km.getText().clear();
+                    propietarios.getText().clear();
+                    rb1.setChecked(false);
+                    rb2.setChecked(false);
                 };
 
 
