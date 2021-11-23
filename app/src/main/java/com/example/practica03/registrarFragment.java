@@ -56,30 +56,76 @@ public class registrarFragment extends Fragment {
                 String estado="";
                 if (rb1.isChecked()) {estado = "Nuevo";}
                 else if (rb2.isChecked()) estado = "Usado";
+                String mar = marca.getText().toString();
+                String mod = modelo.getText().toString();
+                String country = pais.getText().toString();
 
-                if(agregarAuto(Integer.parseInt(codigo.getText().toString()),
-                        marca.getText().toString(),
-                        modelo.getText().toString(),
-                        Integer.parseInt(anio.getText().toString()),
-                        Integer.parseInt(precio.getText().toString()),
-                        Integer.parseInt(cilindraje.getText().toString()),
-                        pais.getText().toString(),
-                        estado,
-                        Integer.parseInt(km.getText().toString()),
-                        Integer.parseInt(propietarios.getText().toString()))){
-                    Toast.makeText(getContext(), "Vehículo registrado correctamente", Toast.LENGTH_SHORT).show();
-                    codigo.getText().clear();
-                    marca.getText().clear();
-                    modelo.getText().clear();
-                    anio.getText().clear();
-                    precio.getText().clear();
-                    cilindraje.getText().clear();
-                    pais.getText().clear();
-                    km.getText().clear();
-                    propietarios.getText().clear();
-                    rb1.setChecked(false);
-                    rb2.setChecked(false);
-                };
+
+                if(codigo.getText().toString().trim().equals("")){
+                    codigo.setHint("Ingresa el código del auto");//it gives user to hint
+                    codigo.setError("Ingresa el código del auto");
+                }
+                else if(mar.equalsIgnoreCase("")){
+                    marca.setHint("Ingresa la Marca");//it gives user to hint
+                    marca.setError("Ingresa la Marca");
+                }
+                else if(mod.equalsIgnoreCase("")){
+                    modelo.setHint("Ingresa el Modelo");//it gives user to hint
+                    modelo.setError("Ingresa el Modelo");
+                }
+                else if(anio.getText().toString().trim().equals("")){
+                    anio.setHint("Ingresa el Año");//it gives user to hint
+                    anio.setError("Ingresa el Año");
+                }
+
+                else if(precio.getText().toString().trim().equals("")){
+                    precio.setHint("Ingresa el valor de venta");//it gives user to hint
+                    precio.setError("Ingresa el valor de venta");
+                }
+                else if(cilindraje.getText().toString().trim().equals("")){
+                    cilindraje.setHint("Ingresa el Cilindraje");//it gives user to hint
+                    cilindraje.setError("Ingresa el Cilindraje");
+                }
+                else if(country.equalsIgnoreCase("")){
+                    pais.setHint("Ingresa el país de origen");//it gives user to hint
+                    pais.setError("Ingresa el país de origen");
+                }
+                else if(km.getText().toString().trim().equals("")){
+                    km.setHint("Ingresa el Kilometraje");//it gives user to hint
+                    km.setError("Ingresa el Kilometraje");
+                }
+                else if(propietarios.getText().toString().trim().equals("")){
+                    propietarios.setHint("Ingresa el Nro de Dueños");//it gives user to hint
+                    propietarios.setError("Nro de Dueños");
+                }
+                else{
+                    if(agregarAuto(Integer.parseInt(codigo.getText().toString()),
+                            mar, mod,
+                            Integer.parseInt(anio.getText().toString()),
+                            Integer.parseInt(precio.getText().toString()),
+                            Integer.parseInt(cilindraje.getText().toString()),
+                            country,
+                            estado,
+                            Integer.parseInt(km.getText().toString()),
+                            Integer.parseInt(propietarios.getText().toString()))){
+                        Toast.makeText(getContext(), "Vehículo registrado correctamente", Toast.LENGTH_SHORT).show();
+                        codigo.getText().clear();
+                        marca.getText().clear();
+                        modelo.getText().clear();
+                        anio.getText().clear();
+                        precio.getText().clear();
+                        cilindraje.getText().clear();
+                        pais.getText().clear();
+                        km.getText().clear();
+                        propietarios.getText().clear();
+                        rb1.setChecked(false);
+                        rb2.setChecked(false);
+                    };
+                }
+
+
+
+
 
 
 

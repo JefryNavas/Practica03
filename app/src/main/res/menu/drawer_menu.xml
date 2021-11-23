@@ -15,6 +15,10 @@
             android:id="@+id/nav_cotizar"
             android:title="Cotizar"
             android:icon="@drawable/logo1001pie"/>
+        <item
+            android:id="@+id/nav_back"
+            android:title="Volver al Menú"
+            android:icon="@drawable/logo1001pie"/>
     </group>
 
 </menu>

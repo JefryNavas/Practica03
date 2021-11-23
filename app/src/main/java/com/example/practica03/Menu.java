@@ -22,4 +22,5 @@ public class Menu extends AppCompatActivity {
         Intent vender = new Intent(this, Vender.class);
         startActivity(vender);
     }
+
 }

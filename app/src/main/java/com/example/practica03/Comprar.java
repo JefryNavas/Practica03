@@ -2,6 +2,7 @@ package com.example.practica03;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.View;
@@ -189,5 +190,10 @@ public class Comprar extends AppCompatActivity implements AdapterView.OnItemSele
 
 
         }
+    }
+
+    public void backMenu(View vista){
+        Intent back = new Intent(this, Menu.class);
+        startActivity(back);
     }
 }

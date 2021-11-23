@@ -9,11 +9,11 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="354dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="304dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo1001pie" />
@@ -226,5 +226,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="52dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:onClick="backMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
