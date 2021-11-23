@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Concesionario {
     static ArrayList<Concesionario> coches = new ArrayList();
     static Concesionario coche_encontrado;
+    static Concesionario auto;
     public Concesionario(){}
 
 
@@ -31,6 +32,11 @@ public class Concesionario {
         this.cilindraje = cilindraje;
         this.Km = km;
         this.propietarios = propietarios;
+    }
+
+    public Concesionario(int precio,int anio){
+        this.precio = precio;
+        this.anio = anio;
     }
 
     public int getKm() {

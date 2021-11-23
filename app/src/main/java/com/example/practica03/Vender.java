@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -93,6 +94,9 @@ public class Vender extends AppCompatActivity implements NavigationView.OnNaviga
             case R.id.nav_cotizar:
                 ft.replace(R.id.content,new cotizarFragment()).commit();
                 break;
+            case R.id.nav_back:
+                cargarConsulta();
+                break;
         }
         setTitle(item.getTitle());
         mDrawerLayout.closeDrawers();
@@ -104,6 +108,11 @@ public class Vender extends AppCompatActivity implements NavigationView.OnNaviga
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void cargarConsulta(){
+        Intent comprar = new Intent(this, Menu.class);
+        startActivity(comprar);
     }
 
 

@@ -16,6 +16,9 @@
             android:name=".Vender"
             android:exported="false"></activity>
         <activity
+            android:name=".Cotizar"
+            android:exported="false"></activity>
+        <activity
             android:name=".Comprar"
             android:exported="false" />
         <activity

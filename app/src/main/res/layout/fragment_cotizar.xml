@@ -1,11 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/teal_700"
     tools:context=".cotizarFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="354dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="72dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo1001pie" />
 
+        <Button
+            android:id="@+id/btn_continuar"
+            android:layout_width="227dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="56dp"
+            android:text="Continuar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anio_cotizar" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="223dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Cotizar Vehículo"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <EditText
+            android:id="@+id/precio_cotizar"
+            android:layout_width="238dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="@string/txt_precio"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/anio_cotizar"
+            android:layout_width="233dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/txt_year"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/precio_cotizar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
