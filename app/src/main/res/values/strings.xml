@@ -22,6 +22,9 @@
     <string name="precio_vehiculo">Precio del auto:</string>
     <string name="cilindraje_auto">Cilindraje:</string>
     <string name="pais">País de Origen:</string>
+    <string name="txt_entrada">Ingrese el valor de entrada:</string>
     <string name="buscar_vehiculo">Buscar Vehículo</string>
+    <string name="btn_cotizar">COTIZAR</string>
+    <string name="resultado_cotizar">CUOTAS: </string>
 
 </resources>
