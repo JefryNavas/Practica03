@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.InputFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,7 @@ public class cotizarFragment extends Fragment {
 
         precio = root.findViewById(R.id.precio_cotizar);
         anio = root.findViewById(R.id.anio_cotizar);
+        anio.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "2021")});
 
 
 
@@ -40,8 +42,22 @@ public class cotizarFragment extends Fragment {
         btn_continuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cotizar.auto = new Concesionario(Integer.parseInt(precio.getText().toString()),Integer.parseInt(anio.getText().toString()));
-                cargarConsulta();
+                String prec = precio.getText().toString();
+                String year = anio.getText().toString();
+
+                if(prec.equalsIgnoreCase("")){
+                    precio.setHint("Ingresa el precio");//it gives user to hint
+                    precio.setError("Ingresa el precio del auto");
+                }
+                else if(year.equalsIgnoreCase("")){
+                    anio.setHint("Ingresa el Año del auto");//it gives user to hint
+                    anio.setError("Ingresa el Año del auto");
+                }else{
+
+                    cotizar.auto = new Concesionario(Integer.parseInt(precio.getText().toString()),Integer.parseInt(anio.getText().toString()));
+                    cargarConsulta();
+                }
+
             }
         });
 

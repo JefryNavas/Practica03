@@ -62,6 +62,7 @@ public class Cotizar extends AppCompatActivity implements AdapterView.OnItemSele
     private int transformar(String value){
         int res = Integer.parseInt(value);
        return res;
+
     }
 
     int valcuo;
